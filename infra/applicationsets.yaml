@@ -6,7 +6,10 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - clusters: {}
+  - list:
+      elements:
+      - cluster: amol-mgmt
+        url: https://kubernetes.default.svc
   template:
     metadata:
       name: self-tracker
@@ -16,6 +19,9 @@ spec:
         repoURL: https://github.com/amold1/for-flux.git
         targetRevision: HEAD
         path: infra
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: argocd
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
@@ -33,7 +39,7 @@ spec:
   - clusters: {}
   template:
     metadata:
-      name: '{{name}}-guestbook'
+      name: guestbook
     spec:
       project: default
       source:
