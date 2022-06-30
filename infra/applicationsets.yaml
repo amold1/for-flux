@@ -37,9 +37,9 @@ metadata:
 spec:
   generators:
   - clusters: {}
-      # selector:
-      #   matchLabels:
-      #     abcd: "xyz"
+      selector:
+        matchLabels:
+          abc: "xyz"
   template:
     metadata:
       name: '{{name}}-guestbook'
