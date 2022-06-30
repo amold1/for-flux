@@ -36,10 +36,10 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - clusters:
-      selector:
-        matchLabels:
-          abcd: "xyz"
+  - clusters: {}
+      # selector:
+      #   matchLabels:
+      #     abcd: "xyz"
   template:
     metadata:
       name: '{{name}}-guestbook'
