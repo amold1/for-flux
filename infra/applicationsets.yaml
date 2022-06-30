@@ -14,7 +14,7 @@ spec:
     metadata:
       name: self-tracker
     spec:
-      project: argocd
+      project: default
       source:
         repoURL: https://github.com/amold1/for-flux.git
         targetRevision: HEAD
@@ -39,7 +39,7 @@ spec:
   - clusters: {}
   template:
     metadata:
-      name: guestbook
+      name: guestbook-app
     spec:
       project: default
       source:
