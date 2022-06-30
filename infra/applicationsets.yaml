@@ -39,7 +39,7 @@ spec:
   - clusters:
       selector:
         matchLabels:
-          abcd: "true"
+          abcd: "xyz"
   template:
     metadata:
       name: '{{name}}-guestbook'
