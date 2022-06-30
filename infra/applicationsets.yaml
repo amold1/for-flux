@@ -36,7 +36,7 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - clusters: {}
+  - clusters:
       selector:
         matchLabels:
           abc: "xyz"
