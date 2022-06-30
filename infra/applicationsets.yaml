@@ -39,7 +39,7 @@ spec:
   - clusters: {}
   template:
     metadata:
-      name: guestbook-app
+      name: '{{name}}-guestbook'
     spec:
       project: default
       source:
