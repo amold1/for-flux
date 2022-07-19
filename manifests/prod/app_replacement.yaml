@@ -1,0 +1,9 @@
+source:
+  kind: Values
+  fieldPath: spec._REPLICA_COUNT_
+targets:
+  - select:
+      kind: Deployment
+      name: guestbook-ui
+    fieldPaths:
+    - spec.replicas
